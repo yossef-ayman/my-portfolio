@@ -1,4 +1,5 @@
 {
+  "homepage": "https://yossef-ayman.github.io/my-portfolio/",
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
@@ -6,7 +7,9 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "predepoly":"npm run build",
+    "depoly":"gh-build -d build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
