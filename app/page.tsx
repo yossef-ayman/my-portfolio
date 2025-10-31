@@ -178,7 +178,7 @@ const translations = {
     certificates: "الشهادات",
     contact: "التواصل",
     education: "التعليم",
-    educationText: "كلية العلوم — جامعة القاهرة\nقسم الحاسبات — الفرقة الرابعة",
+    educationText: "كلية العلوم — جامعة القاهرة\nقسم الحاسب — الفرقة الرابعة",
     workExperience: "Endoura Soft (2024 — الآن)",
     workDescription: "عملت على تطبيقات ويب (React/Node) وحلول سطح مكتب (C#/.NET) وربط قواعد بيانات (Postgres, MongoDB).",
     projectsData: [
@@ -231,7 +231,11 @@ export default function Portfolio() {
   }, [])
 
   // slider data
-  const certificates = ["/images/cert1.png", "/images/cert2.jpg", "/images/cert3.png"] // set your real paths
+const certificates = [
+  "/certificates/UC-074ca7a2-871f-4b1b-96f3-d617b1656cf9.jpg",
+  "/certificates/UC-79315266-465c-4701-91a1-ef8c2d040093.jpg",
+  "/certificates/UC-932d717c-f99d-4216-b8a1-9081e9320cd5.jpg"
+];
   const [slide, setSlide] = useState(0)
   const total = certificates.length || 1
   const next = () => setSlide((s) => (s + 1) % total)
@@ -239,14 +243,14 @@ export default function Portfolio() {
   const goTo = (i) => setSlide(i)
 
   // contact links (replace with yours)
-  const phone = "+201007586266"
   const phone2 = "+201146433667"
   const email = "youssef.ayman@example.com"
-  const facebookLink = "https://www.facebook.com/" // replace
-  const instagramLink = "https://www.instagram.com/" // replace
-  const githubLink = "https://github.com/yossef-ayman"
-  const linkedinLink = "https://linkedin.com/in/yossef-ayman-357b15304"
-  const whatsappLink = `https://wa.me/${phone.replace("+", "")}`
+  const facebookLink = "https://www.facebook.com/share/19cWLtWSYC/";
+const instagramLink = "https://www.instagram.com/yossef_ayman_gmal?igsh=MXIyN2ZmaXQycHNzNg==";
+const githubLink = "https://github.com/yossef-ayman";
+const linkedinLink = "https://www.linkedin.com/in/yossef-ayman-357b15304/";
+const phone = "201146433667";
+const whatsappLink = `https://wa.me/${phone}`;
 
   // scroll helper
   const scrollTo = (id: string) => {
@@ -500,12 +504,42 @@ export default function Portfolio() {
                 <div className="flex items-center gap-3 mb-4"><MapPin className="w-5 h-5 text-sky-500" /><span className="text-gray-300">Cairo, Egypt</span></div>
 
                 <div className="flex flex-wrap gap-3">
-                  <Button variant="outline" size="sm" asChild><a href={linkedinLink} target="_blank" rel="noreferrer" className="flex items-center"><Linkedin className="w-4 h-4 mr-2" /> LinkedIn</a></Button>
-                  <Button variant="outline" size="sm" asChild><a href={githubLink} target="_blank" rel="noreferrer" className="flex items-center"><Github className="w-4 h-4 mr-2" /> GitHub</a></Button>
-                  <Button variant="outline" size="sm" asChild><a href={facebookLink} target="_blank" rel="noreferrer" className="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V15.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.465h-1.26c-1.243 0-1.63.772-1.63 1.562V12h2.773l-.443 2.89h-2.33v5.988C18.343 21.128 22 16.99 22 12z"/></svg>{t.facebookLabel}</a></Button>
-                  <Button variant="outline" size="sm" asChild><a href={instagramLink} target="_blank" rel="noreferrer" className="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 8.5zM18.5 6a.9.9 0 1 0 .9.9A.9.9 0 0 0 18.5 6z"/></svg>{t.instagramLabel}</a></Button>
-                  <Button variant="outline" size="sm" asChild><a href={whatsappLink} target="_blank" rel="noreferrer" className="flex items-center"><MessageCircle className="w-4 h-4 mr-2" /> WhatsApp</a></Button>
-                </div>
+                  <Button variant="outline" size="sm" asChild>
+  <a href="https://www.linkedin.com/in/yossef-ayman-357b15304/" target="_blank" rel="noreferrer" className="flex items-center">
+    <Linkedin className="w-4 h-4 mr-2" /> LinkedIn
+  </a>
+</Button>
+
+<Button variant="outline" size="sm" asChild>
+  <a href="https://github.com/yossef-ayman" target="_blank" rel="noreferrer" className="flex items-center">
+    <Github className="w-4 h-4 mr-2" /> GitHub
+  </a>
+</Button>
+
+<Button variant="outline" size="sm" asChild>
+  <a href="https://www.facebook.com/share/19cWLtWSYC/" target="_blank" rel="noreferrer" className="flex items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V15.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.465h-1.26c-1.243 0-1.63.772-1.63 1.562V12h2.773l-.443 2.89h-2.33v5.988C18.343 21.128 22 16.99 22 12z"/>
+    </svg>
+    Facebook
+  </a>
+</Button>
+
+<Button variant="outline" size="sm" asChild>
+  <a href="https://www.instagram.com/yossef_ayman_gmal?igsh=MXIyN2ZmaXQycHNzNg==" target="_blank" rel="noreferrer" className="flex items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 8.5zM18.5 6a.9.9 0 1 0 .9.9A.9.9 0 0 0 18.5 6z"/>
+    </svg>
+    Instagram
+  </a>
+</Button>
+
+<Button variant="outline" size="sm" asChild>
+  <a href="https://wa.me/201146433667" target="_blank" rel="noreferrer" className="flex items-center">
+    <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp
+  </a>
+</Button>
+ </div>
               </CardContent>
             </Card>
 
