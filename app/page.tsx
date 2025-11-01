@@ -141,7 +141,7 @@ const Styles = () => (
 // =========================
 const translations = {
   en: {
-    name: "Youssef Ayman Mohamed",
+    name: "Yossef Ayman Mohamed",
     title: "4th-year Computer Science • Full-Stack Developer",
     about: "About Me",
     aboutText:
@@ -243,13 +243,13 @@ const certificates = [
   const goTo = (i) => setSlide(i)
 
   // contact links (replace with yours)
-  const phone2 = "+201146433667"
-  const email = "youssef.ayman@example.com"
+  const phone2 = "+201007586266"
+  const email = "yossefayman664@gmail.com"
   const facebookLink = "https://www.facebook.com/share/19cWLtWSYC/";
 const instagramLink = "https://www.instagram.com/yossef_ayman_gmal?igsh=MXIyN2ZmaXQycHNzNg==";
 const githubLink = "https://github.com/yossef-ayman";
 const linkedinLink = "https://www.linkedin.com/in/yossef-ayman-357b15304/";
-const phone = "201146433667";
+const phone = "+201146433667";
 const whatsappLink = `https://wa.me/${phone}`;
 
   // scroll helper
@@ -448,9 +448,13 @@ const whatsappLink = `https://wa.me/${phone}`;
                   <div className="flex flex-wrap gap-2">{t.skillsData.map((s, idx) => <Badge key={idx}>{s}</Badge>)}</div>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-3">{t.languages}</h4>
-                  <div className="space-y-2">{t.languagesData.map((l, idx) => <p key={idx} className="text-gray-300">{l}</p>)}</div>
-                </div>
+                 <h4 className="font-semibold mb-3">{t.languages}</h4>
+<div className="flex flex-col gap-1">
+  {t.languagesData.map((lang, idx) => (
+    <p key={idx} className="text-gray-300">{lang}</p>
+  ))}
+</div>
+</div>
               </div>
             </CardContent>
           </Card>
